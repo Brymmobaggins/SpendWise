@@ -5,9 +5,9 @@
   "main": "tailwind.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:tailwind": " tailwindcss -i ./src/input.css -o ./dist/style.css --watch",
-    "start:server": "nodemon app.js",
-    "start": "concurrently \"npm run build:tailwind\" \"npm run start:server\""
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/style.css --watch",
+    "server": "nodemon app.js",
+    "start": "concurrently \"npm run dev\" \"npm run server\""
   },
   "author": "",
   "license": "ISC",
