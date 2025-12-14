@@ -21,13 +21,13 @@ const DB = mySql.createConnection({
     port: process.env.DATABASE_PORT
 });
 
-DB.connect((error) => {
-    if (error) {
-        console.log(error)
-    } else {
-        console.log("MYSQL connected....")
-    }
-})
+// DB.connect((error) => {
+//     if (error) {
+//         console.log(error)
+//     } else {
+//         console.log("MYSQL connected....")
+//     }
+// })
 // Serve static files from the "dist" directory
 const publicDirectory = path.join(__dirname, "./dist")
 app.use(express.static(publicDirectory))
@@ -47,6 +47,6 @@ app.use("/", require("./routes/pages"));
 app.use("/auth", require("./routes/auth"))
 
 // app listen to server on port 5000
-app.listen(5000, () => {
-    console.log("Server started on port 5000")
+app.listen(5001, () => {
+    console.log("Server started on port 5001")
 })
